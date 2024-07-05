@@ -1,0 +1,30 @@
+// Fonts
+$font-family: 'Nunito', sans-serif;
+$second-family: 'Montserrat', sans-serif;
+
+// Colors
+$primary: #415167;
+$accent: #c7a17a;
+$accent-hover: #f9f5e8;
+$dark: #151d28;
+$dark-title: #232c38;
+$light-gray: #edf0f5;
+$light: #f9fbff;
+$white: #fff;
+$border: #dadada;
+$shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+$shadow-white: 0px 0px 10px 0px rgba(256, 256, 256, 0.5);
+
+// Width
+$width-content: 1400px;
+$tabletLarge: 1200px;
+$tabletMedium: 767px;
+$mobile: 600px;
+$phone: 420px;
+
+// Menu
+$burger-time: 0.1s;
+$burger-width: 60px;
+$burger-height: 40px;
+$burger-line-height: 3px;
+$burger-color: $accent;

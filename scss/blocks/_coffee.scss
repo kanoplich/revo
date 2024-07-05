@@ -1,0 +1,123 @@
+.coffee {
+  background-image: linear-gradient(to right, $primary 30%, $light 30%);
+  padding-bottom: 125px;
+
+  @include mediaTabletLarge {
+    padding-bottom: 0;
+    background-image: linear-gradient(to right, $light 30%, $light 30%);
+  }
+}
+
+.coffee__wrapper {
+  position: relative;
+  margin-top: 70px;
+  margin-left: 100px;
+  height: 552px;
+  overflow: hidden;
+
+  @include mediaTabletMedium {
+    margin-left: 0;
+    height: 1050px;
+  }
+}
+
+.coffee__slider {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(6, 560px);
+  gap: 30px;
+  transition: transform 0.7s ease-in-out;
+
+  @include mediaTabletMedium {
+    grid-template-columns: repeat(6, 360px);
+  }
+
+  @include mediaPhone {
+    grid-template-columns: repeat(6, 290px);
+  }
+}
+
+.coffee__card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.coffee__card_body {
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in;
+  background-color: $white;
+  box-shadow: $shadow-white;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
+  @include mediaTabletMedium {
+    flex-direction: column;
+  }
+}
+
+.coffee__img {
+  background-color: $light-gray;
+  height: 256px;
+  object-fit: contain;
+
+  @include mediaTabletMedium {
+    width: 100%;
+  }
+}
+
+.coffee__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin: 20px;
+
+  @include mediaTabletMedium {
+    text-align: center;
+  }
+}
+
+.coffee__content_price {
+  margin-bottom: 10px;
+}
+
+.coffee__content_title {
+  margin-bottom: 25px;
+}
+
+.coffee__content_text {
+  margin-bottom: 25px;
+}
+
+.coffee__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+
+  @include mediaTabletMedium {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+.coffee__btn_buy {
+  padding: 6px 17px;
+}
+
+.coffee__wrapper_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10%;
+  background-color: rgba($color: $white, $alpha: 0.5);
+
+  @include mediaMobile {
+    background-color: inherit;
+  }
+}

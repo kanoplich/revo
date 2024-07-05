@@ -1,0 +1,33 @@
+.features {
+  background-color: $light;
+  padding-bottom: 125px;
+
+  @include mediaTabletMedium {
+    padding-bottom: 0;
+  }
+}
+
+.features__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.features__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 226px;
+  margin-top: 75px;
+}
+
+.features__card--title {
+  margin-top: 42px;
+}
+
+.features__card--text {
+  margin-top: 12px;
+  text-align: center;
+}

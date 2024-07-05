@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  font-family: $font-family;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: $dark;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $width-content;
+  width: calc(100% - 30px);
+}
+
+.title-1 {
+  font-family: $second-family;
+  font-size: 3.375rem;
+  font-weight: 1000;
+  line-height: 1.3;
+  text-transform: uppercase;
+
+  @include mediaMobile {
+    font-size: 2rem;
+  }
+}
+
+.title-2 {
+  font-family: $second-family;
+  font-size: 1.875rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  line-height: 1.13;
+  color: $primary;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.title-3 {
+  font-family: $font-family;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $primary;
+  text-align: center;
+  padding-top: 90px;
+}
+
+.title-4 {
+  font-family: $font-family;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.17;
+  color: $dark-title;
+}
+
+.title__bg {
+  background-color: $accent;
+  color: $light;
+  padding: 0 15px;
+  margin: 0 -15px;
+}
+
+.text {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 300;
+  color: $dark;
+}
+
+.hidden {
+  z-index: -1;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.animated {
+  display: inline-block;
+  transform: translateX(-900%);
+  animation: 3s cubic-bezier(0.6, -0.55, 0.26, 1.55) forwards slide;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-700%);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.active {
+  display: block;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.section-show {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 1s, opacity 1s;
+}
+
+.price {
+  font-family: $font-family;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $accent;
+}
+
+.btn--buy {
+  background-color: $accent;
+  border-radius: 20px;
+  font-weight: 700;
+  color: $light;
+  transition: all 0.3s ease-in;
+}
+
+.btn--buy:hover {
+  color: $dark-title;
+  background-color: $accent-hover;
+}
+
+.btn--link {
+  font-weight: 700;
+  color: $primary;
+}
+
+.btn--slider {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-image: url('../../assets/img/icons/arrow.svg');
+  background-color: $accent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}

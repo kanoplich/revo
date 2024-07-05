@@ -1,0 +1,162 @@
+.giftset {
+  padding-bottom: 125px;
+  background-image: linear-gradient(to right, $light-gray 70%, $light 70%);
+
+  @include mediaTabletLarge {
+    padding-bottom: 0;
+    background-image: linear-gradient(to right, $light 70%, $light 70%);
+  }
+}
+
+.giftset__wrapper {
+  margin-top: 70px;
+  margin-left: 130px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+
+  @include mediaTabletMedium {
+    margin-left: 0;
+  }
+}
+
+.giftset__right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.giftset__center {
+  margin-left: 270px;
+  padding: 65px 10px 65px 270px;
+  width: 794px;
+  height: 460px;
+  background-color: $light;
+  box-shadow: 2px -2px 12px 0px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  @include mediaTabletLarge {
+    height: 860px;
+    margin-left: 0;
+    padding: 525px 20px 20px 20px;
+  }
+
+  @include mediaMobile {
+    height: 960px;
+    padding: 475px 20px 20px 20px;
+  }
+
+  @include mediaPhone {
+    height: 860px;
+    padding: 325px 20px 20px 20px;
+  }
+}
+
+.giftset__center--content {
+  max-width: 430px;
+  max-height: 320px;
+  height: 100%;
+
+  @include mediaTabletLarge {
+    max-width: 100%;
+  }
+}
+
+.giftset__center--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mediaMobile {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.giftset__center--img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+
+  @include mediaMobile {
+    margin-bottom: 0;
+  }
+}
+
+.giftset__center--text {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 300;
+  color: $primary;
+}
+
+.giftset__center--text2 {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $primary;
+}
+
+.giftset__left {
+  height: 460px;
+  width: 88px;
+}
+
+.giftset__left--btn {
+  cursor: pointer;
+  position: relative;
+  font-family: $second-family;
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 34px;
+  color: $border;
+  background-color: $light-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.333%;
+  z-index: 12;
+
+  transition: all 0.2s ease-in;
+}
+
+.active {
+  position: relative;
+  font-family: $second-family;
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 34px;
+  color: $primary;
+  background-color: $light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px -2px 12px 0px rgba(0, 0, 0, 0.3);
+  z-index: 12;
+}
+
+.filter-green {
+  filter: hue-rotate(112deg);
+}
+
+.filter-blue {
+  filter: hue-rotate(170deg);
+}
+
+.giftset__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+
+  @include mediaMobile {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+  }
+}

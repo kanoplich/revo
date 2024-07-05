@@ -1,0 +1,138 @@
+.combo {
+  background-image: linear-gradient(to right, $light 70%, $primary 70%);
+  padding-bottom: 125px;
+
+  @include mediaTabletLarge {
+    background-image: linear-gradient(to right, $light 70%, $light 70%);
+  }
+}
+
+.combo__wrapper {
+  position: relative;
+  margin-top: 70px;
+  margin-left: 100px;
+  height: 522px;
+  overflow: hidden;
+
+  @include mediaTabletMedium {
+    margin-left: 0;
+  }
+}
+
+.combo__slider {
+  position: absolute;
+  display: flex;
+  column-gap: 30px;
+}
+
+.animated_slider {
+  animation: 0.7s ease-in-out slider;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-390px);
+  }
+}
+
+@include mediaPhone {
+  @keyframes slider {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-320px);
+    }
+  }
+}
+
+.combo__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in;
+  background-color: $white;
+  box-shadow: $shadow-white;
+  width: 360px;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+
+  @include mediaTabletMedium {
+    flex-direction: column;
+  }
+
+  @include mediaPhone {
+    width: 290px;
+  }
+}
+
+.combo__img {
+  background-color: $light-gray;
+  height: 300px;
+  width: 100%;
+}
+
+.combo__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin: 20px;
+}
+
+.combo__price {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.combo__content_price {
+  margin-bottom: 10px;
+}
+
+.combo__content_price_old {
+  color: $primary;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.combo__content_title {
+  margin-bottom: 25px;
+}
+
+.combo__content_text {
+  margin-bottom: 25px;
+}
+
+.combo__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.combo__btn_buy {
+  padding: 6px 17px;
+}
+
+.combo__wrapper_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 10%;
+  background-color: rgba($color: $white, $alpha: 0.5);
+
+  @include mediaMobile {
+    background-color: inherit;
+  }
+}
